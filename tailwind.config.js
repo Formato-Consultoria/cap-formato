@@ -8,10 +8,15 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'custom-background': 'linear-gradient(30deg, #1E1E2F 12%, transparent 12.5%, transparent 87%, #1E1E2F 87.5%, #1E1E2F), linear-gradient(150deg, #1E1E2F 12%, transparent 12.5%, transparent 87%, #1E1E2F 87.5%, #1E1E2F), linear-gradient(30deg, #1E1E2F 12%, transparent 12.5%, transparent 87%, #1E1E2F 87.5%, #1E1E2F), linear-gradient(150deg, #1E1E2F 12%, transparent 12.5%, transparent 87%, #1E1E2F 87.5%, #1E1E2F), linear-gradient(60deg, #1E1E2F77 25%, transparent 25.5%, transparent 75%, #1E1E2F77 75%, #1E1E2F77), linear-gradient(60deg, #1E1E2F77 25%, transparent 25.5%, transparent 75%, #1E1E2F77 75%, #1E1E2F77)',
       },
+    },
+    backgroundSize: {
+      'custom-size': '100% 100%',
+    },
+
+    backgroundPosition: {
+      'custom-position': '0 0, 0 0, 18px 32px, 18px 32px, 0 0, 18px 32px'
     },
   },
   plugins: [],
