@@ -1,4 +1,4 @@
-interface PropValuesForm {
+export interface PropValuesForm {
     name: string,
     email: string,
     cargo: string,

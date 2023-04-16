@@ -1,4 +1,3 @@
-// import Layout from "@/ui/comp-layout";
 import { AppProps } from "next/app";
 import { Toaster } from "react-hot-toast";
 import '@/style/globals.css';
@@ -13,16 +12,12 @@ export default function App({ Component, pageProps }: AppProps) {
       const response = await fetch('/api/random');
       const images = await response.json();
   
-      console.log("primeiro useEffect", images)
-
       setRandomImages(images);
     };
     fetchRandomImages();
   }, []);
 
   useEffect(() => {
-    console.log("segundo useEffect", randomImages)
-
     const interval: any = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * randomImages.length);
       const randomImage = randomImages[randomIndex];

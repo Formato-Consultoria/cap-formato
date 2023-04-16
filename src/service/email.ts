@@ -6,6 +6,6 @@ export const sendContactForm = async (data: PropValuesForm) =>
     body: JSON.stringify(data),
     headers: { "Content-Type": "application/json", Accept: "application/json" },
   }).then((res) => {
-    if (!res.ok) throw new Error("Failed to send message");
+    if (!res.ok) throw new Error("Falha no envio");
     return res.json();
 });

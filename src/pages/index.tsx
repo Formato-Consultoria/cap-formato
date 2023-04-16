@@ -1,15 +1,13 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
-const inter = Inter({ subsets: ['latin'] })
-
-import useFormValidation from "@/hooks/useFormValidation";
+import { useState } from 'react';
 import toast from "react-hot-toast";
 import cx from "clsx";
 
+import useFormValidation from "@/hooks/useFormValidation";
+
 import { PropStateForm, PropValuesForm } from "@/@Types/form";
 import { sendContactForm } from "@/service/email";
-
-import { useState } from 'react';
+import { createCustomer } from '@/service/customer';
 
 const initState: PropStateForm = {
     isLoading: false,
@@ -58,6 +56,19 @@ export default function Home() {
                 const { name, email, cargo } = values;
 
                 await toast.promise(
+                    createCustomer({
+                        name,
+                        email,
+                        cargo
+                    }),
+                    {
+                        loading: 'Fazendo registro...',
+                        success: <b>Registrado com sucesso!</b>,
+                        error:  (error) => <b>{error.message}</b>,
+                    }, { position: "bottom-center" }
+                );
+
+                await toast.promise(
                     sendContactForm({
                         name,
                         email,
@@ -67,7 +78,7 @@ export default function Home() {
                     {
                         loading: 'Enviando...',
                         success: <b>Enviado com sucesso!</b>,
-                        error: <b>Houve algum erro no envio!</b>,
+                        error: (error) => <b>{error.message}</b>,
                     }, { position: "bottom-center" }
                 );
 
@@ -80,10 +91,6 @@ export default function Home() {
                     isLoading: false,
                     errors: error.message,
                 }));
-
-                toast.error(error.message, {
-                    position: "bottom-center"
-                });
             }
         } else {
             for (let error of Object.values(errors)) {
