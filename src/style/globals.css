@@ -2,31 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  background-color: #1E1E2F;
-  background-image: url('/images/randoms/bg-banner-0.png');
+  background-color: #82461B;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;
 
   background-attachment: fixed;
+  color: white;
 }
-
 
 @media (max-width: 600px) {
   body {
