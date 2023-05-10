@@ -111,7 +111,7 @@ export default function Home() {
         <main className='flex flex-col'>
             <section className={"flex items-center justify-center gap-10 md:gap-24 md:px-3 pt-20 pb-10"}>
                 <div className={"flex flex-col w-full md:w-2/5 px-5 md:p-0"}>
-                    <p className={"uppercase text-lg text-center md:text-left"}>o hambúrguer original</p>
+                    <p className={"uppercase text-lg text-center md:text-left text-white"}>o hambúrguer original</p>
                     {/* <h1
                         className={cx(
                             burnstownDam.className,
@@ -122,7 +122,7 @@ export default function Home() {
                     <h1
                         className={cx(
                             burnstownDam.className,
-                            'text-7xl uppercase text-center md:text-left',
+                            'text-white text-7xl uppercase text-center md:text-left',
                             'mb-6'
                         )}
                     >Armazém do Hambúrger</h1>
@@ -145,7 +145,7 @@ export default function Home() {
                 "h-auto w-full bg-orange-300 grid grid-cols-2 md:grid-cols-3 gap-2 py-10 px-5 md:px-10 lg:px-24",
             )}>
 
-                <h2 className={"text-4xl font-bold my-10"}>Lorem ipsum dolor sit amet consectetur</h2>
+                <h2 className={"text-4xl font-bold my-10 text-white"}>Lorem ipsum dolor sit amet consectetur</h2>
 
                 <div className={"relative py-10 px-5 rounded-2xl h-48 w-full"}>
                     <h4 className='absolute z-10 text-xl lg:text-2xl text-orange-200 uppercase'>Cheeseburger</h4>
@@ -201,11 +201,11 @@ export default function Home() {
             )}>
                 {/* image section */}
                 <section className={cx(
-                    "hidden sm:flex h-full w-full items-center justify-center bg-brown-hamburger/90",
+                    "hidden sm:flex h-full w-full items-center justify-center bg-[#82461B]",
                     "relative"
                 )}>
                     <Image
-                        src="/images/menu-hamburger-1.svg"
+                        src="/images/menu-hamburger-5.svg"
                         fill
                         alt="imagem do evento"
                     />
@@ -217,21 +217,22 @@ export default function Home() {
                         <div className="mb-6">
                             <label
                                 htmlFor="email"
-                                className={"block mb-2 text-sm font-medium text-gray-900 dark:text-white"}
+                                className={"block mb-2 text-sm font-medium text-white"}
                             >E-mail</label>
                             <div className="relative group">
                                 <div className="group absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                                     <svg aria-hidden="true"
-                                        className={"w-5 h-5 text-gray-500 dark:text-gray-400"}
-                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                                        className={"w-5 h-5 text-gray-400"}
+                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                    ><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
                                 </div>
                                 <input
                                     type="email"
                                     name="email"
                                     id="email"
                                     className={cx("group/input",
-                                        "mt-1 pl-10 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm font-mediumn shadow-sm placeholder-slate-400 focus:outline-none",
-                                        "focus:border-[#b50cfb] focus:ring-1 focus:ring-[#b50cfb]",
+                                        "mt-1 pl-10 block w-full px-3 h-12 py-2 bg-white border border-slate-300 rounded-xl text-sm font-mediumn shadow-sm placeholder-slate-400 focus:outline-none",
+                                        "focus:border-orange-400 focus:ring-1 focus:ring-orange-400",
                                         (touched.email || values.email) && "disabled:bg-slate-50 disabled:text-slate-500 disabled:placeholder:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 invalid:placeholder:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500",
                                     )}
                                     placeholder="name@gmail.com"
@@ -246,15 +247,15 @@ export default function Home() {
                         <div className="mb-6">
                             <label
                                 htmlFor="name"
-                                className={"block mb-2 text-sm font-medium text-gray-900 dark:text-white"}
+                                className={"block mb-2 text-sm font-medium text-white"}
                             >Nome</label>
                             <input
                                 type="text"
                                 name="name"
                                 id="name"
                                 className={cx(
-                                    "mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm font-mediumn shadow-sm placeholder-slate-400",
-                                    "focus:outline-none focus:border-[#b50cfb] focus:ring-1 focus:ring-[#b50cfb]",
+                                    "mt-1 block w-full px-3 h-12 py-2 bg-white border border-slate-300 rounded-xl text-sm font-mediumn shadow-sm placeholder-slate-400",
+                                    "focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400",
                                     (touched.name || values.name) && "disabled:bg-slate-50 disabled:text-slate-500 disabled:placeholder:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 invalid:placeholder:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                                 )}
                                 placeholder="Nome completo"
@@ -268,15 +269,15 @@ export default function Home() {
                         <div className="mb-6">
                             <label
                                 htmlFor="cargo"
-                                className={"block mb-2 text-sm font-medium text-gray-900 dark:text-white"}
+                                className={"block mb-2 text-sm font-medium text-white"}
                             >Cargo</label>
                             <input
                                 type="text"
                                 name="cargo"
                                 id="cargo"
                                 className={cx(
-                                    "mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm font-mediumn shadow-sm placeholder-slate-400",
-                                    "focus:outline-none focus:border-[#b50cfb] focus:ring-1 focus:ring-[#b50cfb]",
+                                    "mt-1 block w-full h-12 px-3 py-2 bg-white border border-slate-300 rounded-xl text-sm font-mediumn shadow-sm placeholder-slate-400",
+                                    "focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400",
                                     (touched.cargo || values.cargo) && "disabled:bg-slate-50 disabled:text-slate-500 disabled:placeholder:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 invalid:placeholder:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500",
                                 )}
                                 placeholder="Cargo"
@@ -291,14 +292,14 @@ export default function Home() {
                             type='button'
                             onClick={onSubmit}
                             disabled={!values.cargo || !values.email || !values.name || isLoading}
-                            className="text-white dark:bg-[#b50cfb]/80 dark:hover:bg-[#b50cfb] focus:ring-3 focus:outline-none dark:focus:ring-fuchsia-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                            className="text-white bg-orange-400/80 hover:bg-orange-400 focus:ring-3 focus:outline-none focus:ring-fuchsia-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                         >Enviar</button>
                     </form>
                     {isDownloadable && <div>
                         <a
                             href="/download/doc.pdf"
                             download
-                            className="flex items-center rounded bg-[#b50cfb] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#b50cfb] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            className="flex items-center rounded bg-orange-400 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] "
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -314,14 +315,14 @@ export default function Home() {
             <footer className="bg-black">
                 <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                     <div className="sm:flex sm:items-center sm:justify-between">
-                        <div className="flex items-center gap-3 mb-4 sm:mb-0">
+                        <div className="flex items-center gap-3 mb-4 sm:mb-0 text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32"><g fill="currentColor"><path d="M12.743 6c-5.153 0-9.318 4.177-9.318 9.318v.132c.52-.008.887-.074 1.192-.171c.285-.091.529-.212.82-.366A7.317 7.317 0 0 1 12.742 8h6.524c3.901 0 7.097 3.064 7.316 6.916c.288.153.53.273.812.363c.306.098.675.164 1.2.171v-.134C28.584 10.176 24.41 6 19.267 6h-6.524Zm14.191 13.057a8.113 8.113 0 0 1-.686-.187c-.588-.188-1.14-.465-1.654-.723a31.445 31.445 0 0 0-.453-.225c-.453-.218-.923-.373-1.787-.373c-.648 0-1.206.134-1.774.381a9.171 9.171 0 0 0-.602.3l-.013.006c-.212.112-.447.236-.706.353a7.033 7.033 0 0 1-1.68.528h9.355v-.06ZM4.56 21l7.182 1.61c2.797.628 5.708.628 8.506 0L27.43 21h.245c.973 0 1.825.862 1.825 2s-.852 2-1.825 2H4.325c-.973 0-1.825-.862-1.825-2s.852-2 1.825-2h.235Zm9.882-1.883H5.065v-.035c1.014-.21 1.718-.583 2.321-.906l.02-.01c.358-.192.635-.339.966-.445c.324-.103.72-.172 1.294-.172c.575 0 .969.069 1.292.172c.33.105.605.251.962.443l.022.011c.638.343 1.388.74 2.5.942Z"/><path d="M19.207 9.772a.772.772 0 1 1-1.544 0a.772.772 0 0 1 1.544 0Zm-5.642.771a.772.772 0 1 0 0-1.543a.772.772 0 0 0 0 1.543Zm8.328 1.393a.772.772 0 1 1-1.544 0a.772.772 0 0 1 1.544 0Zm-11.014.772a.772.772 0 1 0 0-1.543a.772.772 0 0 0 0 1.543ZM16 13.59a.772.772 0 1 0 0-1.544a.772.772 0 0 0 0 1.544ZM3.565 27.176V25.89c.241.071.495.109.76.109h1.24v1.176c0 1.097.79 1.824 1.576 1.824h17.698c.787 0 1.587-.73 1.595-1.839V26h1.24c.265 0 .52-.038.76-.109v1.28C28.421 29.203 26.897 31 24.84 31H7.14c-2.06 0-3.576-1.8-3.576-3.824ZM9.666 14.75c-1.799 0-2.747.504-3.591.956l-.035.018c-.344.184-.694.372-1.119.507c-.438.14-.938.22-1.598.22c-.492 0-.894.4-.894.9c0 .498.402.899.894.899c1.799 0 2.747-.504 3.591-.956l.035-.018c.344-.184.694-.372 1.12-.507c.437-.14.937-.22 1.597-.22c.66 0 1.158.08 1.596.22c.424.134.773.322 1.116.506l.036.019c.844.452 1.792.956 3.596.956c1.306 0 2.16-.265 2.836-.572c.232-.105.445-.217.662-.331l.005-.003c.214-.112.438-.23.668-.33a5.29 5.29 0 0 1 2.172-.465c1.021 0 1.64.191 2.223.473c.179.086.35.172.517.256c.497.25.953.478 1.46.64a6.927 6.927 0 0 0 2.134.332c.492 0 .894-.4.894-.9c0-.498-.402-.9-.894-.9c-.66 0-1.158-.079-1.596-.218c-.424-.136-.773-.323-1.115-.507l-.035-.019c-.455-.244-.917-.49-1.515-.673c-.541-.165-1.205-.283-2.072-.283c-.868 0-1.532.118-2.073.283c-.48.147-.91.351-1.372.57c-.187.088-.379.18-.581.27c-.68.304-1.43.578-2.318.578c-.663 0-1.164-.08-1.603-.22c-.426-.136-.776-.323-1.119-.507l-.033-.018c-.843-.452-1.79-.956-3.589-.956Zm-4.474 5.367h21.606l-6.769 1.517a18.455 18.455 0 0 1-8.069 0l-6.768-1.517Z"/></g></svg>
                             <span className="self-center text-xl font-semibold whitespace-nowrap text-white">Armazém do Hambúrger</span>
                         </div>
                         <ul className="flex gap-3 flex-wrap items-center mb-6 text-sm font-medium sm:mb-0 text-gray-400">
                             <li>
                                 <Link
-                                    href="#"
+                                    href="https://www.facebook.com/armazemparacatu"
                                     className="mr-4 md:mr-6"
                                     target='_blank'
                                 >
@@ -330,7 +331,7 @@ export default function Home() {
                             </li>
                             <li>
                                 <Link
-                                    href="#"
+                                    href="https://www.instagram.com/armazemparacatu"
                                     className="mr-4 md:mr-6"
                                     target='_blank'
                                 >
@@ -339,7 +340,7 @@ export default function Home() {
                             </li>
                             <li>
                                 <Link
-                                    href="#"
+                                    href="https://wa.me/5538998827807"
                                     className="mr-4 md:mr-6"
                                     target='_blank'
                                 >
