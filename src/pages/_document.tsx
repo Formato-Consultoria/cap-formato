@@ -4,7 +4,8 @@ export default function Document() {
     return (
       <Html lang="en">
         <Head>
-          {/* <link rel="icon" type="image/png" href="https://consultoriaformato.com.br/_next/static/media/icone_dark.a3b7eee8.png" /> */}
+          <link rel="icon" type="image/png" href="favicon.svg" />
+          <title>Armazém do Hambúrger</title>
         </Head>
   
         <body>
