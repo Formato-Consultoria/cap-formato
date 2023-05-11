@@ -15,7 +15,7 @@ const initState: PropStateForm = {
     values: {
         name: "",
         email: "",
-        cargo: "",
+        telefone: "",
         subject: "",
     }
 }
@@ -61,13 +61,13 @@ export default function Home() {
             }));
 
             try {
-                const { name, email, cargo } = values;
+                const { name, email, telefone } = values;
 
                 await toast.promise(
                     createCustomer({
                         name,
                         email,
-                        cargo
+                        telefone
                     }),
                     {
                         loading: 'Fazendo registro...',
@@ -230,22 +230,22 @@ export default function Home() {
 
                             <div className="mb-6">
                                 <label
-                                    htmlFor="cargo"
+                                    htmlFor="telefone"
                                     className={"block mb-2 text-sm font-medium text-white"}
-                                >Cargo</label>
+                                >Telefone</label>
                                 <input
                                     type="text"
-                                    name="cargo"
-                                    id="cargo"
+                                    name="telefone"
+                                    id="telefone"
                                     className={cx(
                                         "mt-1 block w-full h-12 px-3 py-2 bg-white border border-slate-300 rounded-xl text-sm font-mediumn shadow-sm placeholder-slate-400",
                                         "focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400",
-                                        (touched.cargo || values.cargo) && "disabled:bg-slate-50 disabled:text-slate-500 disabled:placeholder:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 invalid:placeholder:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500",
+                                        (touched.telefone || values.telefone) && "disabled:bg-slate-50 disabled:text-slate-500 disabled:placeholder:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 invalid:placeholder:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500",
                                     )}
-                                    placeholder="Cargo"
+                                    placeholder="telefone"
                                     required
                                     onChange={handleChange}
-                                    value={values.cargo}
+                                    value={values.telefone}
                                     onBlur={onBlur}
                                 />
                             </div>
@@ -253,7 +253,7 @@ export default function Home() {
                             <button
                                 type='button'
                                 onClick={onSubmit}
-                                disabled={!values.cargo || !values.email || !values.name || isLoading}
+                                disabled={!values.telefone || !values.email || !values.name || isLoading}
                                 className="text-white bg-orange-400/80 hover:bg-orange-400 focus:ring-3 focus:outline-none focus:ring-fuchsia-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center uppercase"
                             >Liberar download</button>
                         </form>

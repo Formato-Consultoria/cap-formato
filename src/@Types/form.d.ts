@@ -1,7 +1,7 @@
 export interface PropValuesForm {
     name: string,
     email: string,
-    cargo: string,
+    telefone: string,
     subject: string
 };
 

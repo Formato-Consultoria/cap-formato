@@ -1,7 +1,7 @@
 import { PropStateForm } from "@/@Types/form";
 
 export default function useFormValidation({ values, errors }: PropStateForm) {
-    const { name, email, cargo } = values;
+    const { name, email, telefone } = values;
     let isValid = true;
 
     if(!name) {
@@ -18,11 +18,11 @@ export default function useFormValidation({ values, errors }: PropStateForm) {
         delete errors.email
     }
 
-    if(!cargo) {
+    if(!telefone) {
         isValid = false;
-        errors.cargo = "Precisamos que informe o seu cargo ou profissão!";
+        errors.telefone = "Precisamos que informe o seu numero de telefone!";
     } else {
-        delete errors.cargo
+        delete errors.telefone
     }
 
     return {
