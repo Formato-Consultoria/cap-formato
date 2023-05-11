@@ -76,19 +76,19 @@ export default function Home() {
                     }, { position: "bottom-center" }
                 );
 
-                await toast.promise(
-                    sendContactForm({
-                        name,
-                        email,
-                        cargo,
-                        subject: `Messagem do(a) ${values.name}`
-                    }),
-                    {
-                        loading: 'Enviando...',
-                        success: <b>Enviado com sucesso!</b>,
-                        error: (error) => <b>{error.message}</b>,
-                    }, { position: "bottom-center" }
-                );
+                // await toast.promise(
+                //     sendContactForm({
+                //         name,
+                //         email,
+                //         cargo,
+                //         subject: `Messagem do(a) ${values.name}`
+                //     }),
+                //     {
+                //         loading: 'Enviando...',
+                //         success: <b>Enviado com sucesso!</b>,
+                //         error: (error) => <b>{error.message}</b>,
+                //     }, { position: "bottom-center" }
+                // );
 
                 setState(initState);
                 setTouched(initState.values);
@@ -259,7 +259,7 @@ export default function Home() {
                         </form>
                         {isDownloadable && <div>
                             <a
-                                href="/download/doc.pdf"
+                                href="/download/receita-hamburger.pdf"
                                 download
                                 className="flex items-center rounded bg-orange-400 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] "
                             >
