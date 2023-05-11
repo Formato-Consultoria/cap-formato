@@ -5,7 +5,7 @@ export default function Document() {
       <Html lang="en">
         <Head>
           <link rel="icon" type="image/png" href="favicon.svg" />
-          <title>Armazém do Hambúrger</title>
+          <title>Hambúrgeria do João</title>
         </Head>
   
         <body>
