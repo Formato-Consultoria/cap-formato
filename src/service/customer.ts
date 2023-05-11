@@ -9,6 +9,10 @@ export const createCustomer = async (data: DocDataType) => {
     });
     
     if (!response.ok) {
+      const errorData = await response.json();
+      if (errorData && errorData.error) {
+        throw new Error(errorData.error);
+      }
       throw new Error("Erro ao registrar!");
     }
 

@@ -10,8 +10,8 @@ export default async function handler(
         const data: DocDataType = req.body;
         await createCustomer(data);
         res.status(200).json({ success: true });
-    } catch(err) {
+    } catch(err: any) {
         console.error(err);
-        res.status(500).json({ err });
+        res.status(500).json({ error: err.message || "Erro ao criar cliente" });
     }
 }
