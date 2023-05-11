@@ -14,9 +14,6 @@ export default function useFormValidation({ values, errors }: PropStateForm) {
     if(!email) {
         isValid = false;
         errors.email = "O campo de e-mail e obrigatório!";
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-        isValid = false;
-        errors.email = "Este e-mail e inválido!";
     } else {
         delete errors.email
     }
