@@ -12,6 +12,6 @@ export default async function handler(
         res.status(200).json({ success: true });
     } catch(err) {
         console.error(err);
-        res.status(500).json({ error: 'Erro ao criar cliente' });
+        res.status(500).json({ err });
     }
 }
